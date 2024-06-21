@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원 가입</title>
+</head>
+<body>
+  <h3>회원 가입 양식</h3>
+  <form action="">
+    <table>
+      <tr>
+        <td>- 아이디</td>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <td>- 비밀번호</td>
+        <td><input type="password"></td>
+      </tr>
+      <tr>
+        <td>- 비밀번호 확인</td>
+        <td><input type="password"></td>
+      </tr>
+      <tr>
+        <td>- 이름</td>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <td>- 성별</td>
+        <td>
+          <input type="radio" name="gender" checked>여성
+          <input type="radio" name="gender">남성
+        </td>
+      </tr>
+      <tr>
+        <td>- 전화번호</td>
+        <td>
+          <select name="phone" id="phone">
+            <option value="02">02</option>
+            <option value="031">031</option>
+            <option value="033">033</option>
+            <option value="053">053</option>
+            <option value="062">062</option>
+          </select>
+          - <input type="text">
+          - <input type="text">
+        </td>
+      </tr>
+      <tr>
+        <td>- 이메일</td>
+        <td>
+          <input type="text">@
+          <select name="umail" id="umail">
+            <option value="">선택</option>
+            <option value="naver.com">naver.com</option>
+            <option value="daum.net">daum.net</option>
+            <option value="gmail.com">gmail.com</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>- 자기소개</td>
+        <td>
+          <textarea name="info" id="info" cols="50" rows="5"></textarea>
+        </td>
+      </tr>
+    </table>  
+  </form>
+</body>
+</html>
