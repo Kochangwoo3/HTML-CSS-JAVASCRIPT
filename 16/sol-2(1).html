@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>연습문제 2</title>
+  <style>
+    #container{
+      width: 200px;
+      margin: 50px auto;
+    }
+
+    button{
+      border: 1px solid #ccc;
+      background: #fff;
+      padding: 20px 30px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <button id="bttn">현재 시간 보기</button>
+  </div>
+  <script>
+    //여기에 코드를 작성하세요.
+   // window.open("current(1).html", "time", "width = 400, height = 200");
+
+    function openCenter(doc, win, w, h){
+      var left = (screen.availWidth - w) / 2; //팝업 창의 왼쪽 좌료
+      var top = (screen.availHeight - h) / 2;// 위쪽 좌료
+      var opt = "left =" +left + ", top =" + top + ", width =" + w  +", height =" + h 
+      window.open(doc, win, opt) 
+      //document.write("left =" +left + ", top =" + top + ", width =" + w  +", height =" + h ); 이 조건문 opt안에 
+    }
+    
+    document.querySelector('#bttn').onclick = () => openCenter("current(1).html", "time",  400, 200);
+  </script>
+</body>
+</html>
