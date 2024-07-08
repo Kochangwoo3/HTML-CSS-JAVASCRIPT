@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습문제 2</title>
+  <style>
+    form {
+      margin-bottom: 30px;
+    }
+    input[type="text"] {
+      width: 30px;
+      height: 20px;
+      text-align: center;
+    }
+    button {
+      margin-left: 10px;
+    }
+    table {
+      width: 300px;
+    }
+    table, td {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+    }
+    td {
+      padding: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <form action="">
+    <input type="text" id="rCount" value="1">행
+    <input type="text" id="cCount" value="1">열
+    <button onclick="writeTable(); return false;">작성</button>
+  </form>
+  <div id="contents">
+      <!--<table>
+        <tr>  <td>0, 0</td>  <td>0, 1</td></tr>
+        <tr>  <td>1, 0</td>  <td>1, 1</td></tr>
+      </table> -->
+  </div>
+  <!--<table>
+        <tr>  <td>0, 0</td>  <td>0, 1</td></tr>
+        <tr>  <td>1, 0</td>  <td>1, 1</td></tr>
+      </table> -->
+  <script>
+/* 새로운 요소 추가하기   - tag: createElement(), 
+      text: createTextNode(), 자식요소로추가: appendChild()
+      속성 생성 - createAttribute(), setAttributeNode():요소에 속성 추가           
+*/
+
+    function writeTable(){
+      
+      const rowCnt = document.querySelector("#rCount").value;
+      const colCnt = document.querySelector("#cCount").value;
+      // 여기에 코드를 작성해주세요
+      const contents = document.querySelector("#contents");
+      contents.innerText = "";
+
+      let tbl = document.createElement("table");
+      for(i = 0; i < rowCnt; i++){
+        let tr = document.createElement("tr");
+        for(j = 0; j < colCnt; j++){
+          let td = document.createElement("td");
+          let tdText = document.createTextNode(i + ", " + j);
+          td.appendChild(tdText);  // 0, 0
+          tr.appendChild(td);
+        }
+        tbl.appendChild(tr);
+      }
+
+      contents.appendChild(tbl);
+    }
+  </script>
+</body>
+</html>
