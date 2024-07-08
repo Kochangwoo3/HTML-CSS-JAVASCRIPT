@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Modify Set</title>
+</head>
+<body>
+  <p id="textContent">hello, </p>
+  <p id="innerText"> hello, </p>
+  <p id="innerHTML"></p>
+  
+  <script>
+    // a = a + 1;   a += 1;
+    document.querySelector('#textContent').textContent += 
+        '<strong>hello, world</strong>';    
+    document.querySelector('#innerText').innerText += 
+        '<strong>hello, world</strong>';  
+    document.querySelector('#innerHTML').innerHTML += 
+        '<strong>hello, world</strong>';          
+  </script>
+</body>
+</html>
